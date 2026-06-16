@@ -19,6 +19,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.20712740"
     description: "Version 1.0.1 archived snapshot"
+  - type: doi
+    value: "10.5281/zenodo.20715512"
+    description: "Version 1.0.2 archived snapshot"
 authors:
   - family-names: "Fu"
     given-names: "Hongjin"
