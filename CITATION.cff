@@ -7,6 +7,8 @@ abstract: >-
   units of Greater Melbourne, Australia (2000-2024), using open Landsat
   Collection 2 imagery, the 2021 Australian Census, SEIFA, and SRTM elevation.
 type: software
+repository-code: "https://github.com/Hakurei-Ma-risa/melbourne-heat-equity"
+url: "https://github.com/Hakurei-Ma-risa/melbourne-heat-equity"
 authors:
   - family-names: "Fu"
     given-names: "Hongjin"
