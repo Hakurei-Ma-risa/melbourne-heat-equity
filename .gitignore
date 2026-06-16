@@ -18,6 +18,8 @@ paper_methods_results.md
 paper_full_draft.en.md
 paper_full_draft.md
 paper_full_draft.pdf
+paper_anonymous.*
+ijde_*.md
 
 # ---- Python ----
 __pycache__/
