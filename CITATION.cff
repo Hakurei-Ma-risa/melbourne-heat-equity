@@ -9,6 +9,13 @@ abstract: >-
 type: software
 repository-code: "https://github.com/Hakurei-Ma-risa/melbourne-heat-equity"
 url: "https://github.com/Hakurei-Ma-risa/melbourne-heat-equity"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20712253"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.20712254"
+    description: "Version 1.0.0 archived snapshot"
 authors:
   - family-names: "Fu"
     given-names: "Hongjin"

@@ -1,8 +1,7 @@
 # Summer surface temperature and socio-economic inequity in Greater Melbourne
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-<!-- After the first Zenodo release, replace the line below with the DOI badge Zenodo gives you -->
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20712253.svg)](https://doi.org/10.5281/zenodo.20712253)
 
 Reproducible Google Earth Engine (GEE) workflow and processed data for an analysis of
 **summer land surface temperature (LST) and socio-economic equity** across the **359
@@ -104,7 +103,9 @@ hang during auth, prefer IPv4 at the OS level (e.g. `precedence ::ffff:0:0/96 10
 ## Citation
 
 If you use this code or data, please cite the repository (see `CITATION.cff`) and the accompanying
-article once published. A Zenodo DOI will be minted on first release.
+article once published. This release is archived on Zenodo:
+**[10.5281/zenodo.20712253](https://doi.org/10.5281/zenodo.20712253)** (concept DOI — always resolves
+to the latest version).
 
 ## License
 
