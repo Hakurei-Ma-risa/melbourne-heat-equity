@@ -1,0 +1,33 @@
+# ---- Raw public input data (large; re-downloadable — see README "Data sources") ----
+# ABS ASGS 2021 national SA2 shapefile (~69 MB)
+sa2_shp/
+# ABS 2021 Census GCP DataPack for VIC (~30 MB)
+gcp_vic/
+# derived clipped shapefile (the geojson is tracked instead)
+SA2_GreaterMelbourne_shp/
+SA2_GreaterMelbourne_shp.zip
+
+# ---- Internal / pre-publication documents (not for public release) ----
+ijde_review.md
+ijde_review_full_draft.md
+ijde_review_pdf.md
+ijde_review_pdf_v2.md
+paper_methods_draft.md
+paper_intro_discussion.md
+paper_methods_results.md
+paper_full_draft.en.md
+paper_full_draft.md
+paper_full_draft.pdf
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "Summer surface temperature and socio-economic inequity in Greater Melbourne: code and processed data"
+abstract: >-
+  Google Earth Engine workflow and processed data underpinning the analysis of
+  summer land surface temperature and socio-economic inequity across 359 SA2
+  units of Greater Melbourne, Australia (2000-2024), using open Landsat
+  Collection 2 imagery, the 2021 Australian Census, SEIFA, and SRTM elevation.
+type: software
+authors:
+  - family-names: "Fu"
+    given-names: "Hongjin"
+    orcid: "https://orcid.org/0009-0000-2240-184X"
+    affiliation: "School of Engineering, Monash University Malaysia"
+keywords:
+  - urban heat
+  - land surface temperature
+  - socio-economic equity
+  - Google Earth Engine
+  - Landsat
+  - Greater Melbourne
+license: MIT
+version: "1.0.0"
+date-released: "2026-06-16"
