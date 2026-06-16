@@ -39,7 +39,7 @@ prep_abs.py              Merge ABS Census (GCP) + SEIFA -> abs_sa2_socioeconomic
 03_heat_equity.py        Core: heat-equity statistics, maps -> heat_equity_results.csv, figures
 04_spatial.py            Spatial autocorrelation (Moran's I) and spatial regression
 05a_elevation.py         Per-SA2 mean SRTM elevation -> sa2_elevation.csv
-05b_revision_stats.py    Elevation control + bootstrap mediation + spatial-block CV
+05b_revision_stats.py    Elevation control, VIF + spatial LM/Robust-LM diagnostics, bootstrap mediation, spatial-block CV
 
 requirements.txt         Python dependencies
 CITATION.cff             How to cite this repository
@@ -85,7 +85,7 @@ python 02_trend_analysis.py        # background trends
 python 03_heat_equity.py           # core heat-equity analysis + figures
 python 04_spatial.py               # spatial autocorrelation + regression
 python 05a_elevation.py            # -> sa2_elevation.csv
-python 05b_revision_stats.py       # elevation control + mediation + spatial CV
+python 05b_revision_stats.py       # elevation control + VIF/LM diagnostics + mediation + spatial CV
 
 # --- Shortcut ---
 # The processed CSVs above are already included, so steps 03–05 run directly.

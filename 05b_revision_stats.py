@@ -8,8 +8,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.cluster import KMeans
 from sklearn.model_selection import cross_val_score, GroupKFold
 import statsmodels.api as sm
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 from libpysal.weights import Queen
-from spreg import GM_Error_Het
+from spreg import GM_Error_Het, OLS as spreg_OLS
 
 g = gpd.read_file('SA2_GreaterMelbourne.geojson'); g['SA2_CODE21'] = g.SA2_CODE21.astype(str)
 d = pd.read_csv('heat_equity_results.csv'); d['SA2_CODE21'] = d.SA2_CODE21.astype(str)
@@ -44,6 +45,21 @@ b = dict(zip(m.name_x, m.betas.flatten())); p = dict(zip(m.name_x, [v[1] for v i
 print('[M2c] 空间误差模型(+海拔) 标准化β:')
 for f in feats:
     print(f'        {f:12} β={b[f]:+.3f}  p={p[f]:.2e}')
+
+# ===== M2d 多重共线性诊断 VIF（标准化预测变量，含常数项；VIF 与量纲无关）=====
+Xc = sm.add_constant(Xz)
+print('\n[M2d] VIF (多重共线性诊断, 经验阈值 <5 可接受, <10 通常无碍):')
+for i, f in enumerate(feats):
+    print(f'        {f:12} VIF={variance_inflation_factor(Xc, i + 1):.2f}')
+
+# ===== M2e 空间依赖诊断 LM / Robust LM（论证选用空间误差模型优于空间滞后模型）=====
+ols = spreg_OLS(y.reshape(-1, 1), Xz, w=w, spat_diag=True, moran=True, name_x=feats)
+print('[M2e] OLS 残差空间诊断 (统计量 / p):')
+print(f"        Moran's I (error) = {ols.moran_res[0]:+.3f}  (p={ols.moran_res[2]:.2e})")
+print(f'        LM-Lag            = {ols.lm_lag[0]:8.2f}  (p={ols.lm_lag[1]:.2e})')
+print(f'        LM-Error          = {ols.lm_error[0]:8.2f}  (p={ols.lm_error[1]:.2e})')
+print(f'        Robust LM-Lag     = {ols.rlm_lag[0]:8.2f}  (p={ols.rlm_lag[1]:.2e})')
+print(f'        Robust LM-Error   = {ols.rlm_error[0]:8.2f}  (p={ols.rlm_error[1]:.2e})')
 
 # ===== M4 正式中介 IRSAD ->(NDVI,NDBI)-> LST =====
 z = lambda s: (s - s.mean()) / s.std()
