@@ -1,6 +1,6 @@
 {
   "title": "Summer surface temperature and socio-economic inequity in Greater Melbourne: code and processed data",
-  "description": "Google Earth Engine workflow and processed data underpinning the analysis of summer land surface temperature and socio-economic inequity across 359 SA2 units of Greater Melbourne, Australia (2000-2024), using open Landsat Collection 2 imagery, the 2021 Australian Census, SEIFA, and SRTM elevation. Accompanies the manuscript submitted to the International Journal of Digital Earth.",
+  "description": "Google Earth Engine workflow and processed data underpinning the analysis of summer land surface temperature and socio-economic inequity across 359 SA2 units of Greater Melbourne, Australia (2000-2024), using open Landsat Collection 2 imagery, the 2021 Australian Census, SEIFA, and SRTM elevation. Accompanies a manuscript currently under peer review.",
   "upload_type": "software",
   "license": "MIT",
   "access_right": "open",

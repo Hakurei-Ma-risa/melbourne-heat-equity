@@ -7,8 +7,7 @@ Reproducible Google Earth Engine (GEE) workflow and processed data for an analys
 **summer land surface temperature (LST) and socio-economic equity** across the **359
 Statistical Area Level 2 (SA2)** units of Greater Melbourne, Australia, over **2000–2024**.
 
-This repository accompanies a manuscript submitted to the *International Journal of Digital
-Earth* (Taylor & Francis). All inputs are open data.
+This repository accompanies a manuscript currently under peer review. All inputs are open data.
 
 ## Summary of findings
 
